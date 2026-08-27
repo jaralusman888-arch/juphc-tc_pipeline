@@ -5,6 +5,11 @@ metadata:
 spec:
   pipelineRef:
     name: tax-calculator-pipeline
+  params:
+    - name: repo-url
+      value: "https://github.com/jaralusman888-arch/juphc-tc_pipeline"
+    - name: image-name
+      value: "us.icr.io/$SN_CR_NAMESPACE/tax-calculator:1.0"
   workspaces:
     - name: source
       persistentVolumeClaim:
